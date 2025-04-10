@@ -1,3 +1,5 @@
 # Car-Pooling-
 
-# Member-Divyanshu Kirpal
+# Members
+-Divyanshu Kirpal
+-Abhishek Dennis
