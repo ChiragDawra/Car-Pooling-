@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CarPoolX – Car Pooling Application</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Material Icons (for fallback icons) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">CarPoolX</div>
+      <ul class="nav-links">
+        <li><a href="#ride-types">Ride Types</a></li>
+        <li><a href="#corporate">Corporate Rides</a></li>
+        <li><a href="#downloads">Get the App</a></li>
+        <li><a href="#safety">Safety & Insurance</a></li>
+        <li><a href="#driver">Drive with Us</a></li>
+      </ul>
+      <button id="authBtn" class="auth-btn">Login / Sign Up</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Ride Booking Form -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Ride Smart, Save More</h1>
+      <p>Choose a car, bike, or auto – convenient rides at fair prices.</p>
+      <!-- Ride booking form (mockup) -->
+      <form id="bookingForm" class="booking-form">
+        <input type="text" list="locations" id="pickup" placeholder="Pickup location" required>
+        <input type="text" list="locations" id="drop" placeholder="Drop-off location" required>
+        <datalist id="locations">
+          <option value="Current Location"></option>
+          <option value="Chandigarh"></option>
+          <option value="New Delhi"></option>
+          <option value="Mumbai"></option>
+          <option value="Bengaluru"></option>
+        </datalist>
+        <button type="submit">Get Estimate</button>
+      </form>
+      <p id="estimateResult" class="fare-estimate"></p>
+    </div>
+    <!-- Decorative wave SVG for transition -->
+    <div class="wave">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path d="M-16.51,67.57 C150.00,150.00 349.99,-49.98 517.58,90.32 L500.00,150.00 L0.00,150.00 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Ride Types Section: Car, Bike, Auto -->
+  <section id="ride-types" class="ride-types animate-on-scroll">
+    <h2>Ride Types</h2>
+    <p class="section-tagline">Rides for every need and budget</p>
+    <div class="ride-options">
+      <div class="ride-card">
+        <img src="https://www.svgrepo.com/show/125/car.svg" alt="Car Ride" class="icon">
+        <h3>Car</h3>
+        <p>Comfortable car rides for longer distances or group travel.</p>
+      </div>
+      <div class="ride-card">
+        <img src="https://www.svgrepo.com/show/70289/bike.svg" alt="Bike Ride" class="icon">
+        <h3>Bike</h3>
+        <p>Quick two-wheeler rides to beat traffic at lower fares.</p>
+      </div>
+      <div class="ride-card">
+        <img src="https://www.svgrepo.com/show/237600/rickshaw.svg" alt="Auto Ride" class="icon">
+        <h3>Auto</h3>
+        <p>Affordable auto-rickshaw rides for short trips around the city.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Rides Section -->
+  <section id="corporate" class="corporate animate-on-scroll">
+    <h2>Corporate Rides</h2>
+    <p class="section-tagline">Business travel made easy</p>
+    <div class="corporate-content">
+      <img src="https://www.svgrepo.com/show/45691/briefcase.svg" alt="Corporate" class="icon">
+      <p>Offer your employees safe and reliable transportation. Manage rides, track expenses, and streamline business travel with our corporate solutions.</p>
+    </div>
+  </section>
+
+  <!-- App Download Section -->
+  <section id="downloads" class="downloads animate-on-scroll">
+    <h2>Get Our App</h2>
+    <p class="section-tagline">Your ride is a tap away</p>
+    <div class="app-badges">
+      <a href="#" class="store-badge">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Download_on_the_App_Store_RGB_blk.svg" alt="Download on App Store">
+      </a>
+      <a href="#" class="store-badge">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+      </a>
+    </div>
+    <p>Download the CarPoolX app for a better experience, on iOS and Android.</p>
+  </section>
+
+  <!-- Safety & Insurance Section -->
+  <section id="safety" class="safety animate-on-scroll">
+    <h2>Safety &amp; Insurance</h2>
+    <p class="section-tagline">Your peace of mind, our priority</p>
+    <div class="safety-cards">
+      <div class="safety-card">
+        <img src="https://www.svgrepo.com/show/372657/shield-check.svg" alt="Safety" class="icon">
+        <h3>Safety Protocols</h3>
+        <p>Drivers are vetted and rides are tracked in real-time. Share your trip and access emergency help anytime.</p>
+      </div>
+      <div class="safety-card">
+        <span class="material-icons icon">health_and_safety</span>
+        <h3>Ride Insurance</h3>
+        <p>Every trip is covered with complimentary insurance. Ride with confidence knowing you’re protected on the go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabbed Features/Benefits Section -->
+  <section id="benefits" class="benefits animate-on-scroll">
+    <h2>Why Choose CarPoolX?</h2>
+    <div class="features-tabs">
+      <button class="tab active" data-tab="feat1">Affordable</button>
+      <button class="tab" data-tab="feat2">Flexible</button>
+      <button class="tab" data-tab="feat3">Safe</button>
+    </div>
+    <div class="features-panels">
+      <div id="feat1" class="tab-panel active">
+        <p>Share rides and save money. Enjoy cost-effective fares with no surge surprises. Split the cost with co-riders for even more savings.</p>
+      </div>
+      <div id="feat2" class="tab-panel">
+        <p>Car, bike or auto – book the ride that fits your need. Whether a quick solo trip or a group ride, our options are available 24/7 at your schedule.</p>
+      </div>
+      <div id="feat3" class="tab-panel">
+        <p>Travel with confidence. Our drivers undergo background checks, and every ride is equipped with safety features and insurance coverage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Driver Partner Section -->
+  <section id="driver" class="driver animate-on-scroll">
+    <h2>Become a Driver Partner</h2>
+    <p class="section-tagline">Drive with CarPoolX</p>
+    <p class="driver-text">Earn on your own schedule by joining as a driver. Whether you have a car, bike, or auto, drive whenever you want and make money on each trip. Enjoy flexible hours, guaranteed safety, and attractive earnings.</p>
+    <button class="join-btn">Join as a Driver</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CarPoolX. All rights reserved.</p>
+  </footer>
+
+  <!-- Login/Signup Modal -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="auth-tabs">
+        <button class="tab active" data-tab="login">Login</button>
+        <button class="tab" data-tab="signup">Sign Up</button>
+      </div>
+      <!-- Sliding forms container -->
+      <div class="forms-slider">
+        <!-- Login Form -->
+        <div class="form-slide">
+          <form id="loginForm">
+            <h3>Login to CarPoolX</h3>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+        <!-- Signup Form -->
+        <div class="form-slide">
+          <form id="signupForm">
+            <h3>Create an Account</h3>
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
